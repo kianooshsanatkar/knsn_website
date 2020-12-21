@@ -1,3 +1,4 @@
+import logo from './assets/Images/Logo.svg';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
