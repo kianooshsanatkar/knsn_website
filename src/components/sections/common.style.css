@@ -1,0 +1,47 @@
+.second-left-side {
+    border-right: 10px solid white;
+}
+
+.left-side-text {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 30px;
+    width: 500px !important;
+    margin-left: -100px !important;
+}
+
+.empty-left-side {
+    height: 80vh;
+}
+
+.empty-left-side-half {
+    height: 40vh;
+}
+
+.border-color-secondary {
+    border-color: #c4e8ff !important;
+}
+
+.background-color-secondary {
+    background-color: #c4e8ff !important;
+}
+
+.middle-circle {
+    width: 150px;
+    height: 150px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-left: -81px;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid white
+}
+
+.middle-circle img {
+    width: 100%;
+}
+
+.contact-info div{
+    vertical-align: middle;
+}
