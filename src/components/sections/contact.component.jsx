@@ -9,6 +9,7 @@ import {
   PhoneAndroid,
   Email,
   AccountCircle,
+  GitHub,
 } from "@material-ui/icons";
 
 export const Contact = (params) => {
@@ -28,6 +29,7 @@ export const Contact = (params) => {
           <ContactInfo Icon={<PhoneAndroid/>}>+98 91 22 89 77 35</ContactInfo>
           <ContactInfo Icon={<Phone/>}>+98 21 22 44 72 95</ContactInfo>
           <ContactInfo Icon={<Email/>}>Me@KnSn.ir</ContactInfo>
+          <ContactInfo Icon={<GitHub />}>github.com/kianooshsanatkar</ContactInfo>
           <ContactInfo Icon={<LinkedIn/>}>linkedin.com/kianooshsanatkar</ContactInfo>
           <ContactInfo Icon={<Twitter/>}>twitter.com/kianooshsnk</ContactInfo>
           <ContactInfo Icon={<Instagram/>}>instagram.com/kianooshsanatkar</ContactInfo>
