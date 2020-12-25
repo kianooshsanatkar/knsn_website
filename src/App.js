@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 
 import './App.css'
 
-import { Articles } from './components/sections/articles.component'
+// import { Articles } from './components/sections/articles.component'
 import { Bio } from './components/sections/bio.component'
 import { Contact } from './components/sections/contact.component'
 // import { Frameworks } from './components/sections/frameworks.component'
@@ -32,8 +32,8 @@ class App extends React.Component {
             <Empty />
             <Experiences />
             <Empty />
-            <Articles />
-            <Empty />
+            {/* <Articles /> */}
+            {/* <Empty /> */}
             {/* <Frameworks /> */}
           </Grid>
           <Grid item md={1}></Grid>
