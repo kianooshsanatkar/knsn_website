@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Typography from "@material-ui/core/Typography";
+import {Link} from 'react-scroll'
 
 import "./home.style.css";
 
@@ -10,24 +11,30 @@ import { Me } from "../me/me.component";
 
 export const Home = (params) => {
   return (
-    <Grid
-      direction="row-reverse"
-      className="home-section"
-      container
-      justify="center"
-      id="section_me"
-    >
-      <Grid item container sm={6} justify="flex-start">
-        <Intro noSpace size='large'>Hi,</Intro>
-        <Intro><small>I am</small><br/>Kianoosh<br/>Sanatkar</Intro>
-        <Grid item xs={12}>
-          <ExpandMoreIcon fontSize="large" />
+    <section id={params.sectionId}>
+      <Grid
+        direction="row-reverse"
+        className="home-section"
+        container
+        justify="center"
+        id="section_me"
+      >
+        <Grid item container sm={6} justify="flex-start">
+          <Intro noSpace size='large'>Hi,</Intro>
+          <Intro><small>I am</small><br/>Kianoosh<br/>Sanatkar</Intro>
+          <Grid item container>
+            <Grid item xs={12} style={{height:'100px'}}>
+              <Link activeClass="active" spy={true} smooth={true} duration={1500} offset={-200} to="section_about">
+                <ExpandMoreIcon  className='arrow-key' style={{fontSize:'3.5em'}} />
+              </Link>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item container sm={6}>
+          <Me />
         </Grid>
       </Grid>
-      <Grid item container sm={6}>
-        <Me />
-      </Grid>
-    </Grid>
+    </section>
   );
 };
 

@@ -13,12 +13,16 @@
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
+    "jump.js": "^1.0.2",
     "less": "^4.0.0",
+    "rc-scrollbars": "^1.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
+    "react-burger-menu": "^3.0.2",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-scroll": "^1.8.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
