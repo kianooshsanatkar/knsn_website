@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { Grid } from "@material-ui/core";
+import { Grid, Hidden, Typography } from "@material-ui/core";
 import React from "react";
 import {Empty} from './empty.component'
 
@@ -8,14 +8,19 @@ import "./common.style.css";
 
 export default (params) => {
   return (
-    <section>
-      <Grid container>
-        <Grid item sm={3} className="second-left-side">{params.title}</Grid>
-        <Grid item sm={1}>
-          <div className="middle-circle">{params.symbol}</div>
+    <section style={params.style} id={params.id}>
+        {params.startEmpty?<Empty className={params.contact?'border-color-secondary ':''} />:null}
+      <Grid container className= 'section-container'>
+        <Grid item xs={12} md={3} className={(params.contact?'border-color-secondary ':' ') + " second-left-side"}>
+            <Typography variant="h3" className="left-side-text">
+                <Hidden smDown><span style={{padding:'0 .5em', marginLeft:'1em', verticalAlign:'super'}}> __ </span></Hidden>  { params.title}
+            </Typography>
         </Grid>
-        <Grid item sm={8}>{params.children}</Grid>
-        <Empty />
+        <Grid item className='small-icon-image' xs={12} md={1}>
+          <div className={params.symbolClasses+" middle-circle"}>{params.symbol}</div>
+        </Grid>
+        <Grid item xs={12} md={8}>{params.children}</Grid>
+        {!params.startEmpty?<Empty className={params.contact?'border-color-secondary ':''} />:null}
       </Grid>
     </section>
   );

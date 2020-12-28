@@ -1,32 +1,16 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
 
-import {Empty} from './empty.component'
+import Section from './section.component'
+import { Hidden } from "@material-ui/core";
 
-
-export const Experiences = (params) => {
-  return (
-    <section id={params.sectionId}>
-      <Grid item md={1}></Grid>
-      <Grid item md={10}></Grid>
-      <Grid container>
-        <Grid container id="section_experiences">
-          <Grid item sm={3} className="second-left-side">
-            <Typography variant="h3" className="left-side-text">
-              <span>____ </span> Experiences
-            </Typography>
-          </Grid>
-          <Grid item sm={1}>
-            <div className="middle-circle">
-              <AssignmentTurnedInIcon
-                style={{ fontSize: "100px", marginTop: "20px" }}
-              />
-            </div>
-          </Grid>
-          <Grid item sm={8}>
-            <Typography variant="body1" align="left">
+export const Experiences = params =>{
+  return(
+    <Section
+      title='Experiences'
+      symbol={<Hidden mdDown><AssignmentTurnedInIcon style={{ fontSize: "100px", marginTop: "20px" }}/></Hidden>}>
+        <Typography variant="body1" align="left">
               <strong>Study:</strong> Architectures patterns and practices,
               Java, Haskell, Python, Python frameworks, and patterns, review
               some fundamental concepts, etc.
@@ -65,11 +49,6 @@ export const Experiences = (params) => {
               <strong>Arya Electronic:</strong> Start working as an office
               assistant and end up working as an office manager.
             </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Empty />
-      <Grid item md={1}></Grid>
-    </section>
+    </Section>
   );
-};
+}
