@@ -6,7 +6,8 @@ import './common.style.css'
 
 export const Empty = (params) => {
     return <Grid container>
-        <Grid item sm={3} className={'second-left-side '+ (params.half?'empty-left-side-half ':'empty-left-side ')+ params.className}>
+        <Grid item sm={3}>
+            <div className={"line " + (params.half?"line-half": "line-full")} ></div>
         </Grid>
         <Grid item sm={9}>
         </Grid>

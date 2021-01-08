@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Hidden from '@material-ui/core/Hidden'
+import Hidden from "@material-ui/core/Hidden";
 import {
   LinkedIn,
   Twitter,
@@ -14,33 +14,47 @@ import {
 } from "@material-ui/icons";
 
 import Section from "./section.component";
-import {Empty} from './empty.component'
-
 
 export const Contact = (params) => {
   return (
-    <Section contact startEmpty
+    <Section
+      contact
+      startEmpty
       id={params.sectionId}
-      style={{ background: "#333", color: "#c4e8ff" }}
+      className="secondary-theme"
       title="Contact"
       symbolClasses="background-color-secondary border-color-secondary"
-      symbol={<Hidden smDown><AccountCircle
+      symbol={
+        <Hidden smDown>
+          <AccountCircle
             style={{ fontSize: "150px", margin: "-5px", color: "white" }}
-          /></Hidden>
+          />
+        </Hidden>
       }
     >
       <ContactInfo Icon={<PhoneAndroid />}>+98 91 22 89 77 35</ContactInfo>
       <ContactInfo Icon={<Phone />}>+98 21 22 44 72 95</ContactInfo>
-      <ContactInfo Icon={<Email />}>Me@KnSn.ir</ContactInfo>
-      <ContactInfo Icon={<GitHub />}>github.com/kianooshsanatkar</ContactInfo>
+      <ContactInfo Icon={<Email />}>
+        <a href="mailto:Me@KnSn.ir">Me@KnSn.ir</a>
+      </ContactInfo>
+      <ContactInfo Icon={<GitHub />}>
+        <a href="https://github.com/kianooshsanatkar">
+          github.com/kianooshsanatkar
+        </a>
+      </ContactInfo>
       <ContactInfo Icon={<LinkedIn />}>
-        linkedin.com/kianooshsanatkar
+        <a href="https://linkedin.com/kianooshsanatkar">
+          linkedin.com/kianooshsanatkar
+        </a>
       </ContactInfo>
-      <ContactInfo Icon={<Twitter />}>twitter.com/kianooshsnk</ContactInfo>
+      <ContactInfo Icon={<Twitter />}>
+        <a href="https://twitter.com/kianooshsnk">twitter.com/kianooshsnk</a>
+      </ContactInfo>
       <ContactInfo Icon={<Instagram />}>
-        instagram.com/kianooshsanatkar
+        <a href="https://instagram.com/kianooshsanatkar">
+          instagram.com/kianooshsanatkar
+        </a>
       </ContactInfo>
-      <Empty half />
     </Section>
   );
 };

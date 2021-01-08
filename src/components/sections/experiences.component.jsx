@@ -7,7 +7,7 @@ import { Hidden } from "@material-ui/core";
 
 export const Experiences = params =>{
   return(
-    <Section
+    <Section id={params.sectionId}
       title='Experiences'
       symbol={<Hidden mdDown><AssignmentTurnedInIcon style={{ fontSize: "100px", marginTop: "20px" }}/></Hidden>}>
         <Typography variant="body1" align="left">
