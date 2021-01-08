@@ -15,16 +15,27 @@
 
     .middle-circle {
         width: 200px;
-        overflow: hidden;
+        overflow: visible;
     }
     
     .middle-circle img {
+        box-shadow: 1px 2px 7px 0px black;
         width: 100%;
+    }
+    
+    .line-full{
+        height: 60vh;
+    }
+    .line-half{
+        height: 30vh;
     }
     
 }
 
 @media(min-width: 960px) {
+    .big-title{
+        text-shadow: 5px 3px 13px black
+    }
     .left-side-text {
         transform: rotate(90deg);
         position: absolute;
@@ -41,16 +52,31 @@
         margin-left: -81px;
         overflow: hidden;
         position: relative;
-        border: 5px solid white
+        border: 2px solid white;
+        box-shadow: 0 0 5px 1px white;
     }
+        .middle-circle img {
+            width: 100%;
+        }
     
     .second-left-side {
         border-right: 10px solid white;
     }
-    
-    .middle-circle img {
-        width: 100%;
+
+    .line{
+        height: 100%;
+        width: 2px;
+        background-color: white;
+        float: right;
+        box-shadow: 0 0 10px 1px white;
     }
+    .line-full{
+        height: 80vh;
+    }
+    .line-half{
+        height: 40vh;
+    }
+    
     
 }
 
@@ -72,6 +98,18 @@
 
 .contact-info div {
     vertical-align: middle;
+}
+
+.secondary-theme{
+    background: #333;
+    color: #c4e8ff ;
+}
+
+.secondary-theme a{
+    color:#c4e8ff;
+}
+.secondary-theme a:visited{
+    color:#c4e8ff;
 }
 
 .my-inline-list {
